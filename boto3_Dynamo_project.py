@@ -1,12 +1,10 @@
-pip install boto3
-
 import boto3
 
 dynamodb = boto3.resource('dynamodb', region_name= 'us-east-2')
 
 table = dynamodb.create_table( 
     
-    TableName= 'Video_Games',
+    TableName= 'Gem_Games',
     
     AttributeDefinitions=[ 
             
