@@ -1,18 +1,35 @@
 import boto3
 
-dynamodb = boto3.resource('dynamodb', region_name= 'us-east-2')
-
 def lambda_handler(event, context):
-    table = dynamodb.Table('Gem_Games')
+    # Create DynamoDB client
+    dynamodb = boto3.client('dynamodb')
+    table_name = 'Gem_Games'  
 
-    response = table.delete_item(
+    # Query an item from the table
+    item_to_query = 'ItemToQuery' 
+    query_response = dynamodb.get_item(
+        TableName='Gem_Games',
         Key={
-            'title': "God of War 1"
+            'PrimaryKey': {'S': item_to_query}
         }
     )
     
-    status_code = response['ResponseMetadata']['HTTPStatusCode']
-    print(status_code)
+    # Retrieve the queried item
+    queried_item = query_response.get('Item')
+    if queried_item:
+        print('Queried item:', queried_item)
+    else:
+        print('Item not found')
 
+    # Delete an item from the table
+    item_to_delete = 'ItemToDelete'  # Replace with the item you want to delete
+    delete_response = dynamodb.delete_item(
+        TableName=table_name,
+        Key={
+            'PrimaryKey': {'title': "God of War 1"}
+        }
+    )
 
-print("Deleted Items succeded")
+    print('Deletion response:', delete_response)
+    
+    
