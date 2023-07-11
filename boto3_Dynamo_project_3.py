@@ -13,3 +13,6 @@ def lambda_handler(event, context):
     
     status_code = response['ResponseMetadata']['HTTPStatusCode']
     print(status_code)
+
+
+print("Deleted Items succeded")
