@@ -1,5 +1,8 @@
+
+# Boto3 is the name of the Python SDK for AW
 import boto3
 
+# Call the resources from AWS
 dynamodb = boto3.resource('dynamodb', region_name= 'us-east-2')
 
 table = dynamodb.create_table( 
