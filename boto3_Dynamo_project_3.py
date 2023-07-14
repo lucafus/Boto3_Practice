@@ -16,6 +16,5 @@ deletion = table.delete_item(
         }
     )
     
-
-    
+  
 print('Deletion completed: ' , deletion)   
