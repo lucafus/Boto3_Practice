@@ -73,9 +73,9 @@ table.put_item(
 
 table.put_item(
     Item={
-        'title': "Tom Clancy's Splinter Cell",
+        'title': "Tom Clancy's Splinter Cell Double Agent",
         'info': { 
-            'year': 2002 ,
+            'year': 2005 ,
             'genre': "Stealth" ,
             'rating' : 9
         }
@@ -97,9 +97,9 @@ table.put_item(
 
 table.put_item(
     Item={
-        'title': "Prince of Persia",
+        'title': "Prince of Persia and the two crowns",
         'info': { 
-            'year': 2003 ,
+            'year': 2007 ,
             'genre': "Action-Adventure" ,
             'rating' : 9
         }
