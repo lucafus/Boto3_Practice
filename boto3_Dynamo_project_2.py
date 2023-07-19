@@ -97,7 +97,7 @@ table.put_item(
 
 table.put_item(
     Item={
-        'title': "Prince of Persia and the two crowns",
+        'title': "Prince of Persia",
         'info': { 
             'year': 2007 ,
             'genre': "Action-Adventure" ,
