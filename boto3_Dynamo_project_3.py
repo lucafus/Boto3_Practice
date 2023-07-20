@@ -12,7 +12,7 @@ table = dynamodb.Table('Gem_Games')
 
 deletion = table.delete_item(
         Key={
-            'title': 'God of War 1'
+            'title': 'Prince of Persia'
         }
     )
     
