@@ -97,9 +97,9 @@ table.put_item(
 
 table.put_item(
     Item={
-        'title': "Prince of Persia",
+        'title': "Prince of Persia 2 the evil within",
         'info': { 
-            'year': 2007 ,
+            'year': 2008 ,
             'genre': "Action-Adventure" ,
             'rating' : 9
         }
