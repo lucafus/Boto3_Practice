@@ -4,6 +4,10 @@ import boto3
 
 dynamodb = boto3.resource('dynamodb', region_name = 'us-east-2')
 
-#Select the table
+#define the table
 
-dynamodb.delete_table(TableName='Gem_Games')
+table = dynamodb.Table('Gem_Games')
+
+response = table.delete()
+
+print("Table deleted succesfully")
